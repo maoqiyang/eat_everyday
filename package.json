@@ -1,25 +1,36 @@
 {
-  "name": "eat-everyday",
+  "name": "climb-100-floors",
   "version": "1.0.0",
-  "description": "每日菜单规划助手 - 帮助用户自定义每日菜单并实现随机菜品抽取功能",
-  "main": "index.html",
+  "description": "火柴人攀爬100层楼游戏",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "live-server --port=3000",
-    "build": "echo \"Build completed\"",
-    "format": "prettier --write \"**/*.{html,js,css,md}\""
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maoqiyang/eat_everyday.git"
   },
   "keywords": [
-    "menu",
-    "food",
-    "random",
-    "daily-menu",
-    "meal-planner"
+    "game",
+    "phaser",
+    "stickman",
+    "climbing"
   ],
-  "author": "Eat Everyday Team",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "prettier": "^3.2.5"
-  }
+    "terser": "^5.44.1",
+    "vite": "^5.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/maoqiyang/eat_everyday/issues"
+  },
+  "homepage": "https://github.com/maoqiyang/eat_everyday#readme"
 }

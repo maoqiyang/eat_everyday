@@ -7,7 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+*.lcov
+.nyc_output
+
+# Production
 dist
 dist-ssr
 *.local
@@ -30,26 +40,16 @@ dist-ssr
 .env.test.local
 .env.production.local
 
-# Package manager files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
 # Build files
-build/
-.cache/
-.parcel-cache/
+.cache
+.parcel-cache
+.next
+.nuxt
+.vuepress/dist
+.serverless/
+.fusebox/
 
-# OS files
-Thumbs.db
-.DS_Store
-
-# Test coverage
-coverage/
-*.lcov
-
-# Temporary files
-*.tmp
-*.temp
-.temp/
-.tmp/
+# Misc
+*.pem
+.eslintcache
+.stylelintcache
