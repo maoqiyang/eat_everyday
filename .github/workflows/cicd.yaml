@@ -1,0 +1,27 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # 只有推送到 main 分支时才触发，根据需要修改
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # 进入你的项目目录
+            cd /root/eat_everyday
+            
+            # 拉取最新代码
+            # 如果是私有仓库，确保服务器上有拉取权限（配置了 Deploy Key 或 HTTPS 账号密码）
+            git pull origin main
+            rm -rf /usr/share/nginx/html/*
+            cp /root/eat_everyday/*  /usr/share/nginx/html/
+            echo "部署成功！"

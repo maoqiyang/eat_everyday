@@ -1,0 +1,25 @@
+{
+  "name": "eat-everyday",
+  "version": "1.0.0",
+  "description": "每日菜单规划助手 - 帮助用户自定义每日菜单并实现随机菜品抽取功能",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server --port=3000",
+    "build": "echo \"Build completed\"",
+    "format": "prettier --write \"**/*.{html,js,css,md}\""
+  },
+  "keywords": [
+    "menu",
+    "food",
+    "random",
+    "daily-menu",
+    "meal-planner"
+  ],
+  "author": "Eat Everyday Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.2.5"
+  }
+}
